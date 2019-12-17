@@ -16,7 +16,7 @@
 */
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
-}
+};
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -51,7 +51,7 @@ function processFirstItem(stringList, callback) {
 
 function processLength(list, callback) {
   return callback(num = list.length);
-}
+};
 
 /**
  * ### Challenge `processLastItem`
@@ -70,7 +70,7 @@ function processLength(list, callback) {
 
 function processLastItem(stringList, callback) {
   return callback(stringList[stringList.length-1]);
-}
+};
 
 /**
  * ### Challenge `processSum`
@@ -94,9 +94,9 @@ function processSum(numberList, callback) {
   let current = 0;
   for (let i = 0; i < numberList.length; i++) {
     current = numberList[i] + current;
-  }
+  };
   return callback(current);
-}
+};
 
 /**
  * ### Challenge `processProduct`
@@ -119,7 +119,7 @@ function processSum(numberList, callback) {
 
 function processProduct(num1, num2, callback) {
   return callback(num1 * num2);
-}
+};
 
 /**
  * ### Challenge `processContains`
@@ -145,12 +145,12 @@ function processProduct(num1, num2, callback) {
 // NEED TO FIX THIS!!!
 
 function processContains(item, list, callback) {
-  if (list[item] != "") {
-    return callback(true);
+  if (list.includes(item)) {
+    return callback(true)
   } else {
     return callback(false);
-  }
-}
+  };
+};
 
 /**
  * ### Challenge `processDuplicateFree`
