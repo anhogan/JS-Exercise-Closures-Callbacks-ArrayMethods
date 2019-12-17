@@ -303,24 +303,23 @@ function counterMaker() {
 
 function counterMakerWithLimit(value) {
   let count = -1;
-  if (count < value) {
-    return function() {
-      return ++count;
+  return function() {
+    if (count < value) {
+        return ++count;
+      } else {
+      return count = 0;
     };
-  } else {
-    count = 0;
-    return count;
   };
 };
 
-const limitNum = counterMakerWithLimit(4)
-console.log(limitNum());
-console.log(limitNum());
-console.log(limitNum());
-console.log(limitNum());
-console.log(limitNum());
-console.log(limitNum());
-console.log(limitNum());
+// const limitNum = counterMakerWithLimit(4)
+// console.log(limitNum());
+// console.log(limitNum());
+// console.log(limitNum());
+// console.log(limitNum());
+// console.log(limitNum());
+// console.log(limitNum());
+// console.log(limitNum());
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
