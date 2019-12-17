@@ -218,8 +218,6 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 
-// NEED TO FIX THIS!!!
-
 function firstNamesAllCaps(runners) {
   return runners.map(runner => runner.first_name.toUpperCase());
 }
@@ -238,10 +236,9 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 
-// NEED TO FIX THIS!!!
-
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  /* CODE HERE */
+  let shirtSize = runners.filter((runner) => {runner.shirt_size == tShirtSize});
+  return shirtSize;
 }
 
 /**
