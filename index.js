@@ -170,11 +170,10 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 
-// NEED TO FIX THIS!!!
-
 function processDuplicateFree(list, callback) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-}
+  let singleList = [...new Set(list)];
+  return callback(singleList);
+};
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -302,9 +301,26 @@ function counterMaker() {
 
 // NEED TO FIX THIS!!!
 
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
-}
+function counterMakerWithLimit(value) {
+  let count = -1;
+  if (count < value) {
+    return function() {
+      return ++count;
+    };
+  } else {
+    count = 0;
+    return count;
+  };
+};
+
+const limitNum = counterMakerWithLimit(4)
+console.log(limitNum());
+console.log(limitNum());
+console.log(limitNum());
+console.log(limitNum());
+console.log(limitNum());
+console.log(limitNum());
+console.log(limitNum());
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
