@@ -236,6 +236,8 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 
+// NEED TO FIX THIS!!!
+
 function getRunnersByTShirtSize(runners, tShirtSize) {
   let shirtSize = runners.filter((runner) => {runner.shirt_size == tShirtSize});
   return shirtSize;
@@ -255,7 +257,8 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
 // NEED TO FIX THIS!!!
 
 function tallyUpDonations(runners) {
-  /* CODE HERE */
+  let allDonations = runners.reduce((total, runner) => {total += runner.donation}, 0);
+  return allDonations;
 }
 
 /////////////// CLOSURES ///////////////
@@ -279,10 +282,14 @@ function tallyUpDonations(runners) {
 
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
-  }
+  const count = () => {
+    let count = 0;
+    return function() {
+      ++count
+    };
+  };
+
+  return count;
   // BROKEN CODE ENDS
 }
 
