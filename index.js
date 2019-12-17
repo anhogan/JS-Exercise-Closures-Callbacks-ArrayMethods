@@ -278,6 +278,8 @@ function tallyUpDonations(runners) {
  * etc
 */
 
+// NEED TO FIX THIS!!!
+
 function counterMaker() {
   // BROKEN CODE STARTS
   const count = 0;
@@ -307,6 +309,8 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
+
+// NEED TO FIX THIS!!!
 
 function counterMakerWithLimit(/* CODE HERE */) {
   /* CODE HERE */
