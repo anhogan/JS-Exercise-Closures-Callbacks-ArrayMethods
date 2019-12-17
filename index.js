@@ -142,8 +142,6 @@ function processProduct(num1, num2, callback) {
  * should return "sad".
 */
 
-// NEED TO FIX THIS!!!
-
 function processContains(item, list, callback) {
   if (list.includes(item)) {
     return callback(true)
@@ -197,13 +195,11 @@ function processDuplicateFree(list, callback) {
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 
-// NEED TO FIX THIS!!!
-
 function getFullNames(runners) {
-  let newName = runners.forEach(runner => `${runner.last_name}, ${runner.first_name}`)
-  console.log(newName);
+  let newName = [];
+  runners.forEach(runner => newName.push(`${runner.last_name}, ${runner.first_name}`));
   return newName;
-}
+};
 
 /**
  * ### Challenge `firstNamesAllCaps`
