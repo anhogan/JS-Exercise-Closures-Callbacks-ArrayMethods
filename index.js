@@ -50,7 +50,7 @@ function processFirstItem(stringList, callback) {
 */
 
 function processLength(list, callback) {
-  return callback(num = list.length);
+  return callback(list.length);
 };
 
 /**
@@ -144,7 +144,7 @@ function processProduct(num1, num2, callback) {
 
 function processContains(item, list, callback) {
   if (list.includes(item)) {
-    return callback(true)
+    return callback(true);
   } else {
     return callback(false);
   };
@@ -311,15 +311,6 @@ function counterMakerWithLimit(value) {
     };
   };
 };
-
-// const limitNum = counterMakerWithLimit(4)
-// console.log(limitNum());
-// console.log(limitNum());
-// console.log(limitNum());
-// console.log(limitNum());
-// console.log(limitNum());
-// console.log(limitNum());
-// console.log(limitNum());
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
